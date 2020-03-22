@@ -13,16 +13,17 @@ answers[1]="n"
 answers[2]="y"
 
 score=0
-k=0;
+k=0
 for q in "${questions[@]}" 
     do
 	read -p "${q} :"  ans    
-	ans = $( echo ${ans} | tr [:upper:] [:lower:])
-	if [[ ${ans} == $answers[$k] ]]
+	ans=$( echo ${ans} | tr [:upper:] [:lower:])
+	if [[ "${ans}" == "$answers[$k]" ]]
 	   then	
 		echo $q
-	   fi
-	k++
+	fi
+	k=$((k+1))
+	
     done
 
 
