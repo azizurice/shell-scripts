@@ -12,3 +12,13 @@ side2="${2}"
 side3="${3}"
 
 echo "Sides of triangle are: ${side1} ${side2} ${side3}"
+
+if [ "${side1}" -eq "${side2}" ] && [ "${side2}" -eq "${side3}" ]
+then
+  echo "EQUILATERAL"
+elif [ "${side1}" -eq "${side2}" ] || [ "${side2}" -eq "${side3}" ] || [ "${side3}" -eq "${side1}" ]
+then
+  echo "ISOSCELES"
+else
+  echo "SCALENE"
+fi
