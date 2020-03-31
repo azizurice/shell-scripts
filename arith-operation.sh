@@ -6,6 +6,7 @@
 read expression
 #echo `printf "%.3f" $(($expression))`
 
-echo $(echo "scale=3; (($expression))" | bc -l)
-
-
+#echo $(echo "scale=3; (($expression))" | bc -l)
+expression=$(($expression))
+echo $expression
+awk  'BEGIN { rounded = sprintf("%.3f","${expression}"); print rounded }'
