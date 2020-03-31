@@ -4,9 +4,8 @@
 #Your task is to evaluate the expression and display the correct output rounding upto  decimal places.
 
 read expression
-#echo `printf "%.3f" $(($expression))`
+echo `printf "%.3f" $(($expression))`
 
-#echo $(echo "scale=3; (($expression))" | bc -l)
-expression=$(($expression))
-echo $expression
-awk  'BEGIN { rounded = sprintf("%.3f","${expression}"); print rounded }'
+echo $(echo "scale=3; (($expression))" | bc -l)
+
+
