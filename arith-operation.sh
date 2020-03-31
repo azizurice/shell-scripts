@@ -7,5 +7,3 @@ read expression
 #echo `printf "%.3f" $(($expression))`
 
 echo $(echo "scale=3; (($expression))" | bc -l)
-
-
